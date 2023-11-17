@@ -89,12 +89,23 @@ button:focus {
 .header__menu {
     display: flex;
     gap: 4px;
+    margin: 0rem 6rem;
 }
 
+.header__toggle {
+    display: none;
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
 
 .header__menu__item {
     padding: 8px 16px;
     color: var(--color-text);
+    border-bottom: 1px solid transparent;
+    display: block;
 }
 
 .header__menu__item:hover {
@@ -422,7 +433,7 @@ top: 0;
 
 @media screen and (max-width: 768px) {
    .section {
-    padding: 3rem 2rem;
+    padding: 5rem 2rem;
    }
 
    .title {
@@ -436,14 +447,27 @@ top: 0;
    .header {
     flex-direction: column;
     align-items: start;
+    background-color: var(--color-primary);
+   }
+
+   .header__toggle {
+    display: block;
    }
 
    .header__menu {
     flex-direction: column;
     text-align: center;
-    padding: 1rem 4rem;
-
+    padding: 1rem;
+    display: none;
    }
+
+   .header__menu.open {
+    display: flex;
+   }
+
+   .header__menu__item {
+    padding: 3px 0;
+    }
 
    .header__nav {
     width: 100%;

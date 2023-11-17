@@ -1,3 +1,4 @@
+'use strict';
 
 // 스크롤 시 header에 header dark 적용
 const header = document.querySelector('.header');
@@ -6,7 +7,7 @@ document.addEventListener('scroll', function () {
     if (window.scrollY > headerHeight) {
         header.classList.add('header--deco');
     } else {
-        header.classList.remove('header--deco')
+        header.classList.remove('header--deco');
     }
 });
 
@@ -25,3 +26,18 @@ document.addEventListener('scroll', () => {
         document.querySelector('.arrow-up').style.opacity = 1;
     } else {document.querySelector('.arrow-up').style.opacity = 0;}
 });
+
+// navbar 토글버튼 클릭 처리
+
+const navbarMenu = document.querySelector('.header__menu');
+const navbarToggle = document.querySelector('.header__toggle');
+navbarToggle.addEventListener('click', ()=> {
+    navbarMenu.classList.toggle('open');
+})
+
+// navbar 클릭 시 메뉴 자동 닫기
+
+const navbarMenuItem = document.querySelector('.header__menu')
+navbarMenu.addEventListener('click', ()=> {
+    navbarMenu.classList.remove('open');
+})

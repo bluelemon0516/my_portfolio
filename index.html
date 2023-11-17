@@ -22,7 +22,8 @@
     <!-- css -->
     <link rel="stylesheet" href="/portfolio/my_portfolio/css/style.css ">
     <!-- javascript -->
-    <script src="src/main.js" defer></script>
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -33,13 +34,17 @@
         </div>
         <nav class="header__nav">
             <ul class="header__menu">
-                <li><a class="header__menu__item active" href="#home">Home</a></li>
+                <li><a class="header__menu__item" href="#home">Home</a></li>
                 <li><a class="header__menu__item" href="#about">About me</a></li>
                 <li><a class="header__menu__item" href="#skills">Skills</a></li>
                 <li><a class="header__menu__item" href="#work">My work</a></li>
                 <li><a class="header__menu__item" href="#contact">Contact</a></li>
             </ul>
         </nav>
+
+        <button class="header__toggle" aria-label="navigation menu toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
         
     </header>
     <!-- Main -->  
