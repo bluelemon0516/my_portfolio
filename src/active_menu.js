@@ -31,13 +31,13 @@ function observerCallback(entries) {
         entry.intersectionRatio >= 0.95;
     });
 
-console.log(visibleSections);
-console.log('무조건 라스트 섹션!', selectLastOne)
+// console.log(visibleSections);
+// console.log('무조건 라스트 섹션!', selectLastOne)
 
 const navIndex = selectLastOne ? sectionIds.length -1 : findFirstIntersecting(visibleSections);
 selectNavItem(navIndex);
 
-console.log(sectionIds[navIndex]);
+// console.log(sectionIds[navIndex]);
 
 function findFirstIntersecting(intersections) {
     const index = intersections.indexOf(true);
